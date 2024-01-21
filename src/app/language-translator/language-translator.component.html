@@ -1,0 +1,26 @@
+<div class="main-container">
+  <div class="input">
+    <h2>Input</h2>
+    <div class="input">
+      <label for="">Input Text:</label>
+      <input type="text" placeholder="Enter" (input)="onInputChange($event)" />
+      <button (click)="onSubmit()">translate</button>
+    </div>
+    <div class="input">
+      <label for="">Outpu Language:</label>
+      <input type="text" placeholder="Enter" [value]="outputLanguage" (input)="onLanguCodeChange($event)" />
+      <button (click)="onSubmit()">translate</button>
+    </div>
+
+    <!-- <div class="input">
+      <label for="">Language Code</label>
+      <input type="text" placeholder="Enter" (input)="onLanguCodeChange($event)" />
+    </div> -->
+  </div>
+
+  <div class="output">
+    <h2>Output</h2>
+    <p>Used Pipe: {{ inputData | language }}</p>
+    <p>{{ outputData }}</p>
+  </div>
+</div>

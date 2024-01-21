@@ -1,0 +1,33 @@
+<!-- googlemap.component.html -->
+
+<div class="main-container">
+  <div class="title">
+    <label for="addressInput">Enter Address:</label>
+    <input type="text" id="addressInput" [(ngModel)]="initialAddress" />
+    <button (click)="geocodeAddress()">Geocode</button>
+  </div>
+
+  <!-- <google-map
+  [center]="center"
+  [zoom]="zoom"
+  (mapClick)="moveMap($event)"
+  (mapDblclick)="move($event)"
+></google-map> -->
+
+  <div class="map-container">
+    <google-map
+      height="400px"
+      width="750px"
+      [center]="center"
+      [zoom]="zoom"
+      (mapClick)="moveMap($event)"
+      (mapMousemove)="move($event)"
+    >
+    </google-map>
+  </div>
+
+  <div class="footer">
+    <div>Latitude: {{ display?.lat }}</div>
+    <div>Longitude: {{ display?.lng }}</div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title{
+    margin: 20px;
+  }
+
+  .footer{
+    margin: 20px;
+  }
+}
